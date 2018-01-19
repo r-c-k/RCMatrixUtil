@@ -7,7 +7,7 @@ class RCMatrixUtil {
   // ##                    GENERATE                      ##
   // ######################################################
 
-  float[][] zeros (int rows, int cols) {
+  public float[][] zeros (int rows, int cols) {
 
     float[][] resultMatrix = new float[rows][cols];
 
@@ -20,7 +20,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[][] rand (int rows, int cols) {
+  public float[][] rand (int rows, int cols) {
 
     float[][] resultMatrix = new float[rows][cols];
 
@@ -37,7 +37,7 @@ class RCMatrixUtil {
   // ##                    OPERATIONS                    ##
   // ######################################################
 
-  float[] add (float[] matrix_a, float[] matrix_b) /*throws Exception*/ {
+  public float[] add (float[] matrix_a, float[] matrix_b) /*throws Exception*/ {
 
     int cols_a = this.getCols(matrix_a);
     int cols_b = this.getCols(matrix_b);
@@ -56,7 +56,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[][] add (float[][] matrix, float s) {
+  public float[][] add (float[][] matrix, float s) {
 
     int rows = this.getRows(matrix);
     int cols = this.getCols(matrix);
@@ -72,7 +72,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
   
-  float[][] add (float[][] matrix_a, float[][] matrix_b) {
+  public float[][] add (float[][] matrix_a, float[][] matrix_b) {
 
     int rows = this.getRows(matrix_a);
     int cols = this.getCols(matrix_a);
@@ -88,7 +88,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[] sub (float[] matrix_a, float[] matrix_b) /*throws Exception*/ {
+  public float[] sub (float[] matrix_a, float[] matrix_b) /*throws Exception*/ {
 
     int cols_a = this.getCols(matrix_a);
     int cols_b = this.getCols(matrix_b);
@@ -107,7 +107,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[][] sub (float[][] matrix, float s) {
+  public float[][] sub (float[][] matrix, float s) {
 
     int rows = this.getRows(matrix);
     int cols = this.getCols(matrix);
@@ -123,7 +123,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[][] sub (float s, float[][] matrix) {
+  public float[][] sub (float s, float[][] matrix) {
 
     int rows = this.getRows(matrix);
     int cols = this.getCols(matrix);
@@ -139,7 +139,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[][] sub (float[][] matrix_a, float[][] matrix_b) {
+  public float[][] sub (float[][] matrix_a, float[][] matrix_b) {
 
     int rows = this.getRows(matrix_a);
     int cols = this.getCols(matrix_a);
@@ -155,7 +155,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[] mult (float[] matrix, float m) {
+  public float[] mult (float[] matrix, float m) {
 
     int cols = this.getCols(matrix);
 
@@ -168,7 +168,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[][] mult (float[][] matrix, float m) {
+  public float[][] mult (float[][] matrix, float m) {
 
     int rows = this.getRows(matrix);
     int cols = this.getCols(matrix);
@@ -184,7 +184,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
   
-  float[][] mult (float[][] matrix_a, float[][] matrix_b) {
+  public float[][] mult (float[][] matrix_a, float[][] matrix_b) {
 
     int rows = this.getRows(matrix_a);
     int cols = this.getCols(matrix_a);
@@ -200,7 +200,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float[][] dot (float[][] matrix_a, float[][] matrix_b) /*throws Exception*/ {
+  public float[][] dot (float[][] matrix_a, float[][] matrix_b) /*throws Exception*/ {
 
     int rows_a = this.getRows(matrix_a);
     int cols_a = this.getCols(matrix_a);
@@ -226,7 +226,7 @@ class RCMatrixUtil {
     return resultMatrix;
   }
 
-  float sum (float[][] matrix) {
+  public float sum (float[][] matrix) {
 
     int rows = this.getRows(matrix);
     int cols = this.getCols(matrix);
@@ -243,7 +243,7 @@ class RCMatrixUtil {
   }
 
 
-  float[][] make2d (float[] matrix) {
+  public float[][] make2d (float[] matrix) {
 
     int cols = this.getCols(matrix);
 
@@ -257,7 +257,7 @@ class RCMatrixUtil {
   }
 
 
-  float[][] transpose (float[][] matrix) {
+  public float[][] transpose (float[][] matrix) {
 
     int rows = this.getRows(matrix);
     int cols = this.getCols(matrix);
@@ -278,15 +278,15 @@ class RCMatrixUtil {
   // ##                     HELPER                       ##
   // ######################################################
 
-  int getCols (float[] matrix) {
+  public int getCols (float[] matrix) {
     return matrix.length;
   }
 
-  int getRows (float[][] matrix) {
+  public int getRows (float[][] matrix) {
     return matrix.length;
   }
 
-  int getCols (float[][] matrix) {
+  public int getCols (float[][] matrix) {
     return matrix[0].length;
   }
 
@@ -294,7 +294,7 @@ class RCMatrixUtil {
   // ##                    VISUALIZE                     ##
   // ######################################################
 
-  void printMatrix (float[][] matrix) {
+  public void printMatrix (float[][] matrix) {
 
     int rows = this.getRows(matrix);
     int cols = this.getCols(matrix);
