@@ -5,7 +5,7 @@ Simple matrix calculations for processing. (processing.org)
 
 Use like the following:
   
-  // initiate RCMatrixutil object</br>
+  // initiate RCMatrixUtil object</br>
   RCMatrixUtil util = new RCMatrixUtil();
   
   // create new 4x2 matrix filled with zeros</br>
